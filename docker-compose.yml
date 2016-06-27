@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - "localhost:3000:3000"
+    entrypoint: /app/scripts/entrypoint.sh
+    volumes:
+      - ./:/app
+    environment:
+      NODE_ENV: development
