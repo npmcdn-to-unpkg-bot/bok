@@ -1,0 +1,12 @@
+{
+  "testDirectoryName": "tests",
+  "testPathDirs": [
+    "tests"
+  ],
+  "testFileExtensions": [
+    ".js"
+  ],
+  "unmockedModulePathPatterns": [
+    "/node_modules/"
+  ]
+}

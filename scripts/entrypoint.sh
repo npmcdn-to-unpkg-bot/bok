@@ -2,4 +2,5 @@
 
 echo "Installing dependencies"
 npm install
-npm run dev
+
+exec "$@"

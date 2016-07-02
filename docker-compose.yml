@@ -2,9 +2,21 @@ version: '2'
 services:
   app:
     build: .
+    image: bok-dev:latest
     ports:
       - "localhost:3000:3000"
     entrypoint: /app/scripts/entrypoint.sh
+    command: npm run dev
+    volumes:
+      - ./:/app
+    environment:
+      NODE_ENV: development
+  test:
+    build: .
+    image: bok-dev:latest
+    entrypoint: /app/scripts/entrypoint.sh
+    # If I run npm test command, the tests are not executed
+    command: ./node_modules/.bin/jest --verbose --colors --config=.jestrc
     volumes:
       - ./:/app
     environment:
